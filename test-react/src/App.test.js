@@ -15,4 +15,17 @@ test('renders animal form header ', () => {
 
   //assert
   expect(header).toBeInTheDocument();
+  expect(header).toBeTruthy();
+  expect(header).not.toBeFalsy();
 });
+
+
+//Jest global functions
+//~test
+//~expect
+//~toBeInTheDocument
+
+test('concise test - renders animal form header', () => {
+const { getByText } = render(<App />);
+ getByText(/add new animal/i);
+})
